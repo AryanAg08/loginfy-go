@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/constants"
-	"github.com/AryanAg08/loginfy.go/pkg/crypto"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/constants"
+	"github.com/AryanAg08/loginfy-go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 var (

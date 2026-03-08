@@ -9,7 +9,7 @@ Lognify.go provides two authorization models: **Role-Based Access Control (RBAC)
 Roles are defined with a name and a set of permissions:
 
 ```go
-import "github.com/AryanAg08/loginfy.go/authorization"
+import "github.com/AryanAg08/loginfy-go/authorization"
 
 auth := authorization.New()
 
@@ -119,7 +119,7 @@ If a policy for the given action doesn't exist, `Can()` returns `false`.
 Protect routes by requiring the authenticated user to have specific roles:
 
 ```go
-import "github.com/AryanAg08/loginfy.go/middleware"
+import "github.com/AryanAg08/loginfy-go/middleware"
 
 // Require "admin" role
 mux.Handle("/admin/dashboard",

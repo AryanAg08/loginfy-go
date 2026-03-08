@@ -9,10 +9,10 @@ import (
 
 	"golang.org/x/oauth2"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/constants"
-	"github.com/AryanAg08/loginfy.go/pkg/crypto"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/constants"
+	"github.com/AryanAg08/loginfy-go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 const (
@@ -61,7 +61,7 @@ func New(config core.OAuthConfig) *FacebookProvider {
 }
 
 func (p *FacebookProvider) Name() string         { return constants.StrategyFacebook }
-func (p *FacebookProvider) ProviderName() string  { return "facebook" }
+func (p *FacebookProvider) ProviderName() string { return "facebook" }
 
 func (p *FacebookProvider) AuthURL(state string) string {
 	return p.config.AuthCodeURL(state, oauth2.AccessTypeOffline)

@@ -5,7 +5,7 @@ This guide walks you through setting up authentication in a Go application using
 ## Installation
 
 ```bash
-go get github.com/AryanAg08/loginfy.go
+go get github.com/AryanAg08/loginfy-go
 ```
 
 ## Basic Setup
@@ -21,10 +21,10 @@ Every Lognify application follows the same pattern:
 package main
 
 import (
-    "github.com/AryanAg08/loginfy.go/core"
-    "github.com/AryanAg08/loginfy.go/strategies/emailPassword"
-    "github.com/AryanAg08/loginfy.go/storage/memory"
-    "github.com/AryanAg08/loginfy.go/sessions/jwt"
+    "github.com/AryanAg08/loginfy-go/core"
+    "github.com/AryanAg08/loginfy-go/strategies/emailPassword"
+    "github.com/AryanAg08/loginfy-go/storage/memory"
+    "github.com/AryanAg08/loginfy-go/sessions/jwt"
 )
 
 func main() {
@@ -95,7 +95,7 @@ Use middleware to protect your HTTP endpoints:
 ```go
 import (
     "net/http"
-    "github.com/AryanAg08/loginfy.go/middleware"
+    "github.com/AryanAg08/loginfy-go/middleware"
 )
 
 mux := http.NewServeMux()
@@ -137,11 +137,11 @@ import (
     "net/http"
     "time"
 
-    "github.com/AryanAg08/loginfy.go/core"
-    "github.com/AryanAg08/loginfy.go/middleware"
-    "github.com/AryanAg08/loginfy.go/sessions/jwt"
-    "github.com/AryanAg08/loginfy.go/storage/memory"
-    "github.com/AryanAg08/loginfy.go/strategies/emailPassword"
+    "github.com/AryanAg08/loginfy-go/core"
+    "github.com/AryanAg08/loginfy-go/middleware"
+    "github.com/AryanAg08/loginfy-go/sessions/jwt"
+    "github.com/AryanAg08/loginfy-go/storage/memory"
+    "github.com/AryanAg08/loginfy-go/strategies/emailPassword"
 )
 
 func main() {

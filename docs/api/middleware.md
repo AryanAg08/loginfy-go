@@ -1,6 +1,6 @@
 # Middleware API Reference
 
-Package: `github.com/AryanAg08/loginfy.go/middleware`
+Package: `github.com/AryanAg08/loginfy-go/middleware`
 
 HTTP middleware functions for `net/http` that handle authentication and authorization.
 

@@ -14,10 +14,10 @@ import (
 
 	"golang.org/x/oauth2"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/constants"
-	loginfyCrypto "github.com/AryanAg08/loginfy.go/pkg/crypto"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/constants"
+	loginfyCrypto "github.com/AryanAg08/loginfy-go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 const (
@@ -85,7 +85,7 @@ func New(config AppleConfig) *AppleProvider {
 }
 
 func (p *AppleProvider) Name() string         { return constants.StrategyApple }
-func (p *AppleProvider) ProviderName() string  { return "apple" }
+func (p *AppleProvider) ProviderName() string { return "apple" }
 
 func (p *AppleProvider) AuthURL(state string) string {
 	return p.config.AuthCodeURL(state, oauth2.SetAuthURLParam("response_mode", "form_post"))

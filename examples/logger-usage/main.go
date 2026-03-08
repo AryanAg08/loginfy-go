@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 func main() {

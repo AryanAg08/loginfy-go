@@ -25,7 +25,7 @@ The in-memory adapter stores users in a thread-safe map. It's ideal for developm
 ### Usage
 
 ```go
-import "github.com/AryanAg08/loginfy.go/storage/memory"
+import "github.com/AryanAg08/loginfy-go/storage/memory"
 
 store := memory.New()
 app.SetStorage(store)
@@ -72,7 +72,7 @@ fmt.Println(store.Count()) // 0
 ### Error Handling
 
 ```go
-import "github.com/AryanAg08/loginfy.go/storage/memory"
+import "github.com/AryanAg08/loginfy-go/storage/memory"
 
 switch err {
 case memory.ErrUserAlreadyExists:
@@ -87,7 +87,7 @@ case memory.ErrUserNotFound:
 The MongoDB adapter is included as a placeholder for future implementation. All methods currently return `ErrNotImplemented`.
 
 ```go
-import "github.com/AryanAg08/loginfy.go/storage/mongodb"
+import "github.com/AryanAg08/loginfy-go/storage/mongodb"
 
 store := mongodb.New(mongodb.Config{
     ConnectionString: "mongodb://localhost:27017",
@@ -111,7 +111,7 @@ package postgres
 
 import (
     "database/sql"
-    "github.com/AryanAg08/loginfy.go/core"
+    "github.com/AryanAg08/loginfy-go/core"
 )
 
 type PostgresStorage struct {

@@ -9,10 +9,10 @@ import (
 
 	"golang.org/x/oauth2"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/constants"
-	"github.com/AryanAg08/loginfy.go/pkg/crypto"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/constants"
+	"github.com/AryanAg08/loginfy-go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 const (
@@ -60,7 +60,7 @@ func New(config core.OAuthConfig) *DiscordProvider {
 }
 
 func (p *DiscordProvider) Name() string         { return constants.StrategyDiscord }
-func (p *DiscordProvider) ProviderName() string  { return "discord" }
+func (p *DiscordProvider) ProviderName() string { return "discord" }
 
 func (p *DiscordProvider) AuthURL(state string) string {
 	return p.config.AuthCodeURL(state, oauth2.AccessTypeOffline)

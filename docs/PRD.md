@@ -2,7 +2,7 @@
 
 ## 1. Product Overview
 
-**Lognify.go** (Go module: `github.com/AryanAg08/loginfy.go`) is a modular, plug-and-play authentication and authorization framework for Go applications. It provides a composable API for handling user registration, login, session management, role-based access control, policy-based authorization, and HTTP middleware integration.
+**Lognify.go** (Go module: `github.com/AryanAg08/loginfy-go`) is a modular, plug-and-play authentication and authorization framework for Go applications. It provides a composable API for handling user registration, login, session management, role-based access control, policy-based authorization, and HTTP middleware integration.
 
 The framework is designed with extensibility at its core — every major component (strategies, storage, sessions, authorization) is defined as an interface, allowing developers to swap implementations without changing application code.
 

@@ -9,10 +9,10 @@ import (
 
 	"golang.org/x/oauth2"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/constants"
-	"github.com/AryanAg08/loginfy.go/pkg/crypto"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/constants"
+	"github.com/AryanAg08/loginfy-go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 const (
@@ -65,7 +65,7 @@ func New(config core.OAuthConfig) *GitHubProvider {
 }
 
 func (p *GitHubProvider) Name() string         { return constants.StrategyGitHub }
-func (p *GitHubProvider) ProviderName() string  { return "github" }
+func (p *GitHubProvider) ProviderName() string { return "github" }
 
 func (p *GitHubProvider) AuthURL(state string) string {
 	return p.config.AuthCodeURL(state, oauth2.AccessTypeOffline)

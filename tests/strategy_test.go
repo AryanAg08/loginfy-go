@@ -5,10 +5,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/crypto"
-	"github.com/AryanAg08/loginfy.go/storage/memory"
-	"github.com/AryanAg08/loginfy.go/strategies/emailPassword"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/storage/memory"
+	"github.com/AryanAg08/loginfy-go/strategies/emailPassword"
 )
 
 func setupStrategyTest(t *testing.T) (*core.Loginfy, *memory.MemoryStorage) {

@@ -1,6 +1,6 @@
 # Authorization API Reference
 
-Package: `github.com/AryanAg08/loginfy.go/authorization`
+Package: `github.com/AryanAg08/loginfy-go/authorization`
 
 The authorization package provides role-based access control (RBAC) and policy-based authorization.
 

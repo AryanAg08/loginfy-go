@@ -10,10 +10,10 @@ import (
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/constants"
-	"github.com/AryanAg08/loginfy.go/pkg/crypto"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/constants"
+	"github.com/AryanAg08/loginfy-go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 const userInfoURL = "https://www.googleapis.com/oauth2/v2/userinfo"
@@ -52,7 +52,7 @@ func New(config core.OAuthConfig) *GoogleProvider {
 }
 
 func (p *GoogleProvider) Name() string         { return constants.StrategyGoogle }
-func (p *GoogleProvider) ProviderName() string  { return "google" }
+func (p *GoogleProvider) ProviderName() string { return "google" }
 
 func (p *GoogleProvider) AuthURL(state string) string {
 	return p.config.AuthCodeURL(state, oauth2.AccessTypeOffline)

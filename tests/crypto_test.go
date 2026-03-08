@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/AryanAg08/loginfy.go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/pkg/crypto"
 )
 
 func TestHashPassword(t *testing.T) {

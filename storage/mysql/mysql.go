@@ -8,8 +8,8 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 var (

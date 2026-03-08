@@ -4,7 +4,7 @@
 
 ### Plug-and-play authentication and authorization framework for Go applications
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/AryanAg08/loginfy.go.svg)](https://pkg.go.dev/github.com/AryanAg08/loginfy.go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/AryanAg08/loginfy-go.svg)](https://pkg.go.dev/github.com/AryanAg08/loginfy-go)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)]()
 
@@ -32,10 +32,10 @@ package main
 
 import (
     "fmt"
-    "github.com/AryanAg08/loginfy.go/core"
-    "github.com/AryanAg08/loginfy.go/strategies/emailPassword"
-    "github.com/AryanAg08/loginfy.go/storage/memory"
-    "github.com/AryanAg08/loginfy.go/sessions/jwt"
+    "github.com/AryanAg08/loginfy-go/core"
+    "github.com/AryanAg08/loginfy-go/strategies/emailPassword"
+    "github.com/AryanAg08/loginfy-go/storage/memory"
+    "github.com/AryanAg08/loginfy-go/sessions/jwt"
 )
 
 func main() {
@@ -52,7 +52,7 @@ func main() {
 ## 📦 Installation
 
 ```bash
-go get github.com/AryanAg08/loginfy.go
+go get github.com/AryanAg08/loginfy-go
 ```
 
 Requires **Go 1.21+**.
@@ -68,10 +68,10 @@ import (
     "fmt"
     "time"
 
-    "github.com/AryanAg08/loginfy.go/core"
-    "github.com/AryanAg08/loginfy.go/strategies/emailPassword"
-    "github.com/AryanAg08/loginfy.go/storage/memory"
-    "github.com/AryanAg08/loginfy.go/sessions/jwt"
+    "github.com/AryanAg08/loginfy-go/core"
+    "github.com/AryanAg08/loginfy-go/strategies/emailPassword"
+    "github.com/AryanAg08/loginfy-go/storage/memory"
+    "github.com/AryanAg08/loginfy-go/sessions/jwt"
 )
 
 func main() {
@@ -134,7 +134,7 @@ app.Use(oauth.NewGoogle(oauth.GoogleConfig{
 ### JWT Session Management
 
 ```go
-import "github.com/AryanAg08/loginfy.go/sessions/jwt"
+import "github.com/AryanAg08/loginfy-go/sessions/jwt"
 
 sm := jwt.New(jwt.Config{
     Secret:     "your-256-bit-secret",
@@ -161,7 +161,7 @@ err = sm.DestroySession(ctx, token)
 ### RBAC Authorization
 
 ```go
-import "github.com/AryanAg08/loginfy.go/authorization"
+import "github.com/AryanAg08/loginfy-go/authorization"
 
 auth := authorization.New()
 
@@ -200,7 +200,7 @@ if auth.Can(user, "edit-post", post) {
 ### Middleware Usage
 
 ```go
-import "github.com/AryanAg08/loginfy.go/middleware"
+import "github.com/AryanAg08/loginfy-go/middleware"
 
 mux := http.NewServeMux()
 
@@ -243,7 +243,7 @@ app.SetHooks(core.Hooks{
 ### Storage Adapters
 
 ```go
-import "github.com/AryanAg08/loginfy.go/storage/memory"
+import "github.com/AryanAg08/loginfy-go/storage/memory"
 
 // In-memory storage (great for development/testing)
 store := memory.New()

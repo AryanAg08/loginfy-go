@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/constants"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
-	"github.com/AryanAg08/loginfy.go/pkg/status"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/constants"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/pkg/status"
 )
 
 var log = logger.NewServiceLogger("auth-middleware")
@@ -153,11 +153,11 @@ func RequireRole(loginfy *core.Loginfy, roles ...string) func(http.Handler) http
 			// Check if user has any of the required roles
 			if !user.HasAnyRole(roles...) {
 				log.Warn("role check failed: insufficient permissions", map[string]interface{}{
-					"user_id":       user.ID,
-					"user_roles":    user.Roles,
+					"user_id":        user.ID,
+					"user_roles":     user.Roles,
 					"required_roles": roles,
-					"path":          r.URL.Path,
-					"request_id":    loginfyCtx.RequestID,
+					"path":           r.URL.Path,
+					"request_id":     loginfyCtx.RequestID,
 				})
 				http.Error(w, "Forbidden: Insufficient permissions", status.StatusForbidden())
 				return
@@ -204,10 +204,10 @@ func RequirePermission(loginfy *core.Loginfy, permission string) func(http.Handl
 			// Check permissions in metadata
 			if user.Metadata == nil {
 				log.Warn("permission check failed: no metadata", map[string]interface{}{
-					"user_id":           user.ID,
+					"user_id":             user.ID,
 					"required_permission": permission,
-					"path":              r.URL.Path,
-					"request_id":        loginfyCtx.RequestID,
+					"path":                r.URL.Path,
+					"request_id":          loginfyCtx.RequestID,
 				})
 				http.Error(w, "Forbidden: Insufficient permissions", status.StatusForbidden())
 				return
@@ -217,10 +217,10 @@ func RequirePermission(loginfy *core.Loginfy, permission string) func(http.Handl
 			permissionsRaw, ok := user.Metadata["permissions"]
 			if !ok {
 				log.Warn("permission check failed: no permissions in metadata", map[string]interface{}{
-					"user_id":           user.ID,
+					"user_id":             user.ID,
 					"required_permission": permission,
-					"path":              r.URL.Path,
-					"request_id":        loginfyCtx.RequestID,
+					"path":                r.URL.Path,
+					"request_id":          loginfyCtx.RequestID,
 				})
 				http.Error(w, "Forbidden: Insufficient permissions", status.StatusForbidden())
 				return
@@ -251,11 +251,11 @@ func RequirePermission(loginfy *core.Loginfy, permission string) func(http.Handl
 
 			if !hasPermission {
 				log.Warn("permission check failed: permission not found", map[string]interface{}{
-					"user_id":           user.ID,
-					"user_permissions":  permissions,
+					"user_id":             user.ID,
+					"user_permissions":    permissions,
 					"required_permission": permission,
-					"path":              r.URL.Path,
-					"request_id":        loginfyCtx.RequestID,
+					"path":                r.URL.Path,
+					"request_id":          loginfyCtx.RequestID,
 				})
 				http.Error(w, "Forbidden: Insufficient permissions", status.StatusForbidden())
 				return
@@ -272,4 +272,3 @@ func RequirePermission(loginfy *core.Loginfy, permission string) func(http.Handl
 		})
 	}
 }
-

@@ -1,6 +1,6 @@
 # Core API Reference
 
-Package: `github.com/AryanAg08/loginfy.go/core`
+Package: `github.com/AryanAg08/loginfy-go/core`
 
 The core package defines the central types and interfaces for the Lognify.go framework.
 

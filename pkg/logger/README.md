@@ -38,7 +38,7 @@ pkg/logger/
 ```go
 package main
 
-import "github.com/AryanAg08/loginfy.go/pkg/logger"
+import "github.com/AryanAg08/loginfy-go/pkg/logger"
 
 func main() {
     logger.Infof("Server started on port %d", 8080)
@@ -63,7 +63,7 @@ func main() {
 ```go
 package main
 
-import "github.com/AryanAg08/loginfy.go/pkg/logger"
+import "github.com/AryanAg08/loginfy-go/pkg/logger"
 
 func main() {
     apiLogger := logger.NewServiceLogger("api-gateway", logger.Config{
@@ -99,7 +99,7 @@ Sessions automatically create temporary log files in `/tmp/lognify/` (configurab
 package main
 
 import (
-    "github.com/AryanAg08/loginfy.go/pkg/logger"
+    "github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 func main() {
@@ -157,7 +157,7 @@ package main
 
 import (
     "net/http"
-    "github.com/AryanAg08/loginfy.go/pkg/logger"
+    "github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 func main() {
@@ -192,8 +192,8 @@ func main() {
 package emailPassword
 
 import (
-    "github.com/AryanAg08/loginfy.go/core"
-    "github.com/AryanAg08/loginfy.go/pkg/logger"
+    "github.com/AryanAg08/loginfy-go/core"
+    "github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 type EmailPasswordStrategy struct {
@@ -454,7 +454,7 @@ sess.FilePath  string
 ```go
 import (
     "github.com/gin-gonic/gin"
-    "github.com/AryanAg08/loginfy.go/pkg/logger"
+    "github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 func main() {
@@ -479,7 +479,7 @@ func main() {
 ```go
 import (
     "google.golang.org/grpc"
-    "github.com/AryanAg08/loginfy.go/pkg/logger"
+    "github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 type Server struct {

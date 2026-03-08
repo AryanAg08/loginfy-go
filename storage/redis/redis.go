@@ -8,8 +8,8 @@ import (
 
 	"github.com/redis/go-redis/v9"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 var (
@@ -18,8 +18,8 @@ var (
 )
 
 const (
-	userKeyPrefix  = "user:"
-	emailIndexKey  = "user:email_index"
+	userKeyPrefix = "user:"
+	emailIndexKey = "user:email_index"
 )
 
 // RedisStorage is a Redis implementation of the Storage interface.

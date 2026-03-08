@@ -3,7 +3,7 @@ package core
 import (
 	"net/http"
 
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 // Loginfy is the main authentication framework instance

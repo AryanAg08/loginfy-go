@@ -36,7 +36,7 @@ The built-in `emailPassword` strategy handles credential-based authentication.
 ### Setup
 
 ```go
-import "github.com/AryanAg08/loginfy.go/strategies/emailPassword"
+import "github.com/AryanAg08/loginfy-go/strategies/emailPassword"
 
 strategy := emailPassword.New()
 app.Use(strategy)
@@ -83,7 +83,7 @@ During authentication:
 ### Error Handling
 
 ```go
-import "github.com/AryanAg08/loginfy.go/strategies/emailPassword"
+import "github.com/AryanAg08/loginfy-go/strategies/emailPassword"
 
 switch err {
 case emailPassword.ErrMissingCredentials:
@@ -102,7 +102,7 @@ You can implement the `Strategy` interface to create any authentication method:
 ```go
 package apikey
 
-import "github.com/AryanAg08/loginfy.go/core"
+import "github.com/AryanAg08/loginfy-go/core"
 
 type APIKeyStrategy struct {
     // your fields

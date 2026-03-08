@@ -9,10 +9,10 @@ import (
 
 	"golang.org/x/oauth2"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/pkg/constants"
-	"github.com/AryanAg08/loginfy.go/pkg/crypto"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/pkg/constants"
+	"github.com/AryanAg08/loginfy-go/pkg/crypto"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 const userInfoURL = "https://graph.microsoft.com/v1.0/me"
@@ -59,7 +59,7 @@ func New(config core.OAuthConfig, tenantID ...string) *MicrosoftProvider {
 }
 
 func (p *MicrosoftProvider) Name() string         { return constants.StrategyMicrosoft }
-func (p *MicrosoftProvider) ProviderName() string  { return "microsoft" }
+func (p *MicrosoftProvider) ProviderName() string { return "microsoft" }
 
 func (p *MicrosoftProvider) AuthURL(state string) string {
 	return p.config.AuthCodeURL(state, oauth2.AccessTypeOffline)

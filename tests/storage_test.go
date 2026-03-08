@@ -3,8 +3,8 @@ package tests_test
 import (
 	"testing"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/storage/memory"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/storage/memory"
 )
 
 func TestCreateUser(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/sessions/jwt"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/sessions/jwt"
 )
 
 func newJWTManager() *jwt.JWTSessionManager {

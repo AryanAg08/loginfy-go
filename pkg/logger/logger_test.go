@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
 )
 
 func TestLoggerOutput(t *testing.T) {

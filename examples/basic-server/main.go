@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/AryanAg08/loginfy.go/core"
-	"github.com/AryanAg08/loginfy.go/middleware"
-	"github.com/AryanAg08/loginfy.go/pkg/logger"
-	"github.com/AryanAg08/loginfy.go/strategies/emailPassword"
+	"github.com/AryanAg08/loginfy-go/core"
+	"github.com/AryanAg08/loginfy-go/middleware"
+	"github.com/AryanAg08/loginfy-go/pkg/logger"
+	"github.com/AryanAg08/loginfy-go/strategies/emailPassword"
 )
 
 func main() {

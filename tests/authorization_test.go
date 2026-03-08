@@ -3,8 +3,8 @@ package tests_test
 import (
 	"testing"
 
-	"github.com/AryanAg08/loginfy.go/authorization"
-	"github.com/AryanAg08/loginfy.go/core"
+	"github.com/AryanAg08/loginfy-go/authorization"
+	"github.com/AryanAg08/loginfy-go/core"
 )
 
 func TestDefineRole(t *testing.T) {

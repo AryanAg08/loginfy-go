@@ -55,10 +55,14 @@ func (sl *ServiceLogger) Fatal(msg string, fields ...map[string]interface{}) {
 }
 
 // Debugf, Infof, Warnf, Errorf for formatted messages
-func (sl *ServiceLogger) Debugf(format string, args ...interface{}) { sl.logger.Debugf(format, args...) }
-func (sl *ServiceLogger) Infof(format string, args ...interface{})  { sl.logger.Infof(format, args...) }
-func (sl *ServiceLogger) Warnf(format string, args ...interface{})  { sl.logger.Warnf(format, args...) }
-func (sl *ServiceLogger) Errorf(format string, args ...interface{}) { sl.logger.Errorf(format, args...) }
+func (sl *ServiceLogger) Debugf(format string, args ...interface{}) {
+	sl.logger.Debugf(format, args...)
+}
+func (sl *ServiceLogger) Infof(format string, args ...interface{}) { sl.logger.Infof(format, args...) }
+func (sl *ServiceLogger) Warnf(format string, args ...interface{}) { sl.logger.Warnf(format, args...) }
+func (sl *ServiceLogger) Errorf(format string, args ...interface{}) {
+	sl.logger.Errorf(format, args...)
+}
 
 // StartSession creates a session scoped to this service
 func (sl *ServiceLogger) StartSession(sessionID string) (*Session, error) {

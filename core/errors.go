@@ -9,11 +9,11 @@ import (
 
 // Common errors
 var (
-	ErrStrategyNotFound      = errors.New("authentication strategy not found")
-	ErrSessionManagerNotSet  = errors.New("session manager not configured")
-	ErrStorageNotSet         = errors.New("storage not configured")
-	ErrUnauthorized          = errors.New("unauthorized")
-	ErrInsufficientRole      = errors.New("insufficient role permissions")
+	ErrStrategyNotFound       = errors.New("authentication strategy not found")
+	ErrSessionManagerNotSet   = errors.New("session manager not configured")
+	ErrStorageNotSet          = errors.New("storage not configured")
+	ErrUnauthorized           = errors.New("unauthorized")
+	ErrInsufficientRole       = errors.New("insufficient role permissions")
 	ErrInsufficientPermission = errors.New("insufficient permissions")
 )
 

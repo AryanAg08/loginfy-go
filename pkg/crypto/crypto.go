@@ -12,9 +12,9 @@ import (
 )
 
 var (
-	ErrHashFailed    = errors.New("failed to hash password")
-	ErrInvalidHash   = errors.New("invalid password hash format")
-	ErrMismatch      = errors.New("password does not match")
+	ErrHashFailed  = errors.New("failed to hash password")
+	ErrInvalidHash = errors.New("invalid password hash format")
+	ErrMismatch    = errors.New("password does not match")
 )
 
 const DefaultCost = bcrypt.DefaultCost

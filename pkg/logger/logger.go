@@ -271,13 +271,13 @@ var std = Default()
 func SetDefault(l *Logger) { std = l }
 
 // Package-level functions forward to the default logger
-func DebugMsg(msg string, fields ...map[string]interface{})  { std.Debug(msg, fields...) }
-func InfoMsg(msg string, fields ...map[string]interface{})   { std.Info(msg, fields...) }
-func WarnMsg(msg string, fields ...map[string]interface{})   { std.Warn(msg, fields...) }
-func ErrorMsg(msg string, fields ...map[string]interface{})  { std.Error(msg, fields...) }
-func FatalMsg(msg string, fields ...map[string]interface{})  { std.Fatal(msg, fields...) }
-func Debugf(format string, args ...interface{})              { std.Debugf(format, args...) }
-func Infof(format string, args ...interface{})               { std.Infof(format, args...) }
-func Warnf(format string, args ...interface{})               { std.Warnf(format, args...) }
-func Errorf(format string, args ...interface{})              { std.Errorf(format, args...) }
-func Fatalf(format string, args ...interface{})              { std.Fatalf(format, args...) }
+func DebugMsg(msg string, fields ...map[string]interface{}) { std.Debug(msg, fields...) }
+func InfoMsg(msg string, fields ...map[string]interface{})  { std.Info(msg, fields...) }
+func WarnMsg(msg string, fields ...map[string]interface{})  { std.Warn(msg, fields...) }
+func ErrorMsg(msg string, fields ...map[string]interface{}) { std.Error(msg, fields...) }
+func FatalMsg(msg string, fields ...map[string]interface{}) { std.Fatal(msg, fields...) }
+func Debugf(format string, args ...interface{})             { std.Debugf(format, args...) }
+func Infof(format string, args ...interface{})              { std.Infof(format, args...) }
+func Warnf(format string, args ...interface{})              { std.Warnf(format, args...) }
+func Errorf(format string, args ...interface{})             { std.Errorf(format, args...) }
+func Fatalf(format string, args ...interface{})             { std.Fatalf(format, args...) }

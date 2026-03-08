@@ -188,6 +188,6 @@ func (l *Logger) CloseAllSessions() {
 // --- Package-level session helpers ---
 
 func StartSession(sessionID string) (*Session, error) { return std.StartSession(sessionID) }
-func GetSession(sessionID string) (*Session, bool)     { return std.GetSession(sessionID) }
-func ActiveSessions() int                              { return std.ActiveSessions() }
-func CloseAllSessions()                                { std.CloseAllSessions() }
+func GetSession(sessionID string) (*Session, bool)    { return std.GetSession(sessionID) }
+func ActiveSessions() int                             { return std.ActiveSessions() }
+func CloseAllSessions()                               { std.CloseAllSessions() }

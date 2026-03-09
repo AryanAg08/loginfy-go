@@ -348,7 +348,7 @@ loginfy.go/
 Contributions are welcome! Here's how to get started:
 
 1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/AryanAg08/Lognify.go.git`
+2. **Clone** your fork: `git clone https://github.com/AryanAg08/loginfy-go.git`
 3. **Create a branch**: `git checkout -b feature/my-feature`
 4. **Make changes** and add tests
 5. **Run tests**: `go test ./...`
